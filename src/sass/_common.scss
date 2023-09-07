@@ -1,29 +1,38 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+
 .loader {
-    width: 60px;
-    height: 60px;
-    border: 5px solid #288919;
-    border-bottom-color: transparent;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: #fff;
     border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 2s linear infinite;
+    overflow: hidden;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%)
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    margin: auto;
+    background: #222b32;
+     border-radius: 50%;
+  }
+  .loader:before{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    margin: auto;
+    background: #de3500;
+    animation: crlMugLoader 2s linear infinite alternate;
+  }
+  @keyframes crlMugLoader {
+    0%  ,10% { transform: translateY(64px) }
+    90% , 100% { transform: translateY(0px) }
+  }
 
 .text-description{
     font-size: 20px;
