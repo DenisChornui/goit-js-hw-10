@@ -1,9 +1,19 @@
 import axios from "axios";
+import {fetchBreeds, fetchCatByBreed} from "./cat-api"
 
-axios.defaults.headers.common["x-api-key"] = 'live_fa33HqTiZIJcKbQBWNtw70LpTUY5HukjFC2et4u0KCvTkBcNxGaxomcWlFlUCUcD';
+axios.defaults.headers.common["x-api-key"] = 
+"live_fa33HqTiZIJcKbQBWNtw70LpTUY5HukjFC2et4u0KCvTkBcNxGaxomcWlFlUCUcD";
 
-const selected = document.querySelector('.breed-select');
+const selection = document.querySelector(".breed-select");
 
-// selected.addEventListener('change', catInfo);
+fetchBreeds()
+
+selection.addEventListener("change", fetchCatByBreed);
+
+
+
+
+
+
 
 
