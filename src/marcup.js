@@ -14,6 +14,7 @@ export function create(obj) {
             <h3>Temperament: ${obj.breeds[0].temperament}</h3>
           </div>
           <div><img src="${obj.url}" alt="${obj.breeds[0].name}" width="500px" height="500px"></div>`;
+          
 }
 export const elms = {
   select: document.querySelector('.breed-select'),
