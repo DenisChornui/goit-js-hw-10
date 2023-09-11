@@ -34,27 +34,33 @@
     90% , 100% { transform: translateY(0px) }
   }
 
-.text-description{
-    font-size: 20px;
-    width: 400px;
-
+.breed-select {
+  display: none;
+}
+.breed-select-visible {
+  display: block;
+}
+.loader {
+  display: block;
+  font-weight: 900;
 }
 
-.title{
-font-size: 45px;
+.loader-hiden {
+  display: none;
 }
-
-.text{
-margin-right: 30px;
+.error-hiden {
+  display: none;
 }
-
-.cat-info{
-    padding-top: 100px;
-    padding-left: 30px;
-
+.error {
+  display: block;
+  color: red;
 }
-
-.text-temperament{
-    width: 450px;
-    font-size: 18px;
+.cat-info {
+  display: flex;
+  gap: 10px;
+  padding-top: 100px;
+  padding-left: 30px;
+}
+.cat-info-hiden {
+  display: none;
 }
